@@ -1,16 +1,23 @@
-import { CardContainer, ColumnContainer, ColumnTitle } from "./styles"
+import { AddNewItem } from "./AddNewItem";
+import { Card } from "./Card";
+import { ColumnContainer, ColumnTitle } from "./styles";
 
 type ColumnProps = {
-  text: string
-}
+  text: string;
+};
 
 export const Column = ({ text }: ColumnProps) => {
   return (
     <ColumnContainer>
       <ColumnTitle>{text}</ColumnTitle>
-      <CardContainer>Generate app scaffold</CardContainer>
-      <CardContainer>Learn Typescript</CardContainer>
-      <CardContainer>Begin to use static typing</CardContainer>
+      <Card text='Generate app scaffold' />
+      <Card text='Learn Typescript' />
+      <Card text='Begin to use static typing' />
+      <AddNewItem
+        toggleButtonText='+ Add another card'
+        onAdd={() => console.log("New item added")}
+        dark
+      />
     </ColumnContainer>
-  )
-}
+  );
+};
