@@ -8,7 +8,7 @@ import {
 import { useImmerReducer } from "use-immer";
 import { DragItem } from "../DragItem";
 import { Action } from "./actions";
-import { AppState, appStateReducer, List, Task } from "./app.StateReducer";
+import { AppState, appStateReducer, List, Task } from "./appStateReducer";
 
 type AppStateContextProps = {
   lists: List[];
